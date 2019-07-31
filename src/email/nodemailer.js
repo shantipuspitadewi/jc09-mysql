@@ -12,6 +12,9 @@ const transporter = nodemailer.createTransport(
         }
     }
 )
+
+const mailVerify = (user) => {
+    var {name, username, email} = user
 const mail= {
     from:'Shanti Puspita Dewi <shantipdewi@gmail.com>',
     to : email,
