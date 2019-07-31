@@ -14,14 +14,15 @@ const transporter = nodemailer.createTransport(
 )
 const mail= {
     from:'Shanti Puspita Dewi <shantipdewi@gmail.com>',
-    to : 'shantipuspitadewi89@gmail.com',
-    subject:'Hello from the other side',
-    html:`<h1>Hello,Its ME</h1>`
-   // <a href='http://localhost:2019/verify'>Klik untuk Verifikasi</a>
+    to : email,
+    subject: 'Hello from the other side',
+    html: `<h1>HELLO ${name}, ITS MEH</h1>
+    <a href='http://localhost:2019/verify?uname=${username}' >Klik untuk verifikasi</a>`
 }
-transporter.sendMail(mail,(err,result)=>{
+
+transporter.sendMail(mail, (err, result) => {
     if(err) return console.log(err.message)
-    console.log('alhamdulilah berhasil bro')
+    console.log('Alhamdulillah ya berhasil')
 })
 
 module.exports = mailVerify
